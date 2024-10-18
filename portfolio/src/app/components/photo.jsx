@@ -12,7 +12,7 @@ function Photo() {
                     style={{ objectFit: 'cover', objectPosition: 'center' }}
                     alt="me"
                     priority
-                    sizes="(max-width: 220px) 100vw, 220px"
+                    sizes="(max-width: 220px) 100vw, 220px" 
                 />
             </div>
         </div>
