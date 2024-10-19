@@ -2,7 +2,7 @@ import React from 'react'
 
 function Header() {
   return (
-    <div className='flex flex-col lg:text-4xl md:text-3xl text-2xl w-4/5 mx-auto'>
+    <div className='flex flex-col lg:text-4xl md:text-3xl text-2xl '>
       <div>Eda Işil İnal</div>
       <div className='flex sm:flex-row md:mt-6 flex-col'>
         <div>I'm a </div>
