@@ -3,7 +3,7 @@ import Header from '../components/homeheader'
 
 function Home() {
   return (
-    <div >
+    <div className='mt-8'>
    <Header/> 
     </div>
   )
