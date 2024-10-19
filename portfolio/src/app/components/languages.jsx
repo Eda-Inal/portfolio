@@ -20,7 +20,7 @@ function Languages() {
                 <div className='flex flex-col'>
                     {
                         data.languages1.map((language) => (
-                            <div className={`${language.color} md:mt-4 mt-2'`}>{language.name}</div>
+                            <div className={`${language.color} mt-2 md:mt-4 mt-2'`}>{language.name}</div>
                         ))
                     }
 
@@ -28,18 +28,18 @@ function Languages() {
                 <div className='flex flex-col ml-16 md:ml-28'>
                     {
                         data.languages2.map((language) => (
-                            <div className={`${language.color} md:mt-4 mt-2'`}>{language.name}</div>
+                            <div className={`${language.color} mt-2 md:mt-4 mt-2'`}>{language.name}</div>
                         ))
                     }
                 </div>
             </div>
-            <div className='flex mt-12'> 
+            <div className='flex mt-12 flex-wrap '> 
     {
         [...data.languages1, ...data.languages2].map((language) => (
             language.src && (  //sadece srcyi render eder
                 <div 
                     key={language.name} 
-                    className='relative w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] md:w-[60px] md:h-[60px] rounded-full overflow-hidden mr-4'
+                    className='relative w-[35px] h-[35px] sm:w-[50px] sm:h-[50px] lg:w-[60px] lg:h-[60px] rounded-full overflow-hidden mr-4 mt-4'
                 >
                     <Image
                         src={language.src}

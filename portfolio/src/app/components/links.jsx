@@ -5,8 +5,8 @@ import Image from 'next/image';
 
 function Links() {
     return (
-        <div className='md:w-36 md:mt-4 flex-col  flex md:flex-row md:justify-between justify-between h-28 sm:h-40 ml-2 sm:ml-8 md:ml-0  md:h-20  '>
-            <div className='relative w-[40px] h-[40px]  sm:w-[50px] sm:h-[50px] md:w-[60px] md:h-[60px] rounded-full overflow-hidden'>
+        <div className='md:w-36 md:mt-4 flex-col  flex md:flex-row md:justify-between justify-around h-28 sm:h-40 ml-2 sm:ml-8 md:ml-0  md:h-20  '>
+            <div className='relative w-[30px] h-[30px]  sm:w-[40px] sm:h-[40px] md:w-[60px] md:h-[60px] rounded-full overflow-hidden'>
                 <Image
                     src={github}
                     fill
@@ -14,7 +14,7 @@ function Links() {
                     alt="LinkedIn Logo"
                 />
             </div>
-            <div className='relative w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] md:w-[60px] md:h-[60px] rounded-full overflow-hidden'>
+            <div className='relative w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] md:w-[60px] md:h-[60px] rounded-full overflow-hidden'>
                 <Image
                     src={linkedin}
                     fill
