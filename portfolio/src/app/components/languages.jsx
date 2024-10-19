@@ -1,37 +1,16 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
+
 
 function Languages() {
-    let languages1 = [{
-        "name": "HTML",
-        "color": "text-html"
-    }, {
-        "name": "CSS",
-        "color": "text-css"
-    },
-    {
-        "name": "JAVASCRIPT",
-        "color": "text-js"
-    },
-    {
-        "name": "REACT",
-        "color": "text-react"
-    }];
-    let languages2 = [{
-        "name": "REDUX",
-        "color": "text-redux"
-    },
-    {
-        "name": "TYPESCRIPT",
-        "color": "text-ts"
-    },
-    {
-        "name": "NEXT JS",
-        "color": "text-nextjs"
-    },
-    {
-        "name": "SASS",
-        "color": "text-sass"
-    }]
+    const [data, setData] = useState({ languages1: [], languages2: [] });
+    useEffect(() => {
+        fetch('/languages.json')
+            .then((response) => response.json())
+            .then((data) => setData(data))
+            .catch((error) => console.error('Error loading languages:', error));
+    }, []);
 
     return (
         <div>
@@ -40,7 +19,7 @@ function Languages() {
             <div className='flex flex-row md:text-2xl text-md sm:text-xl font-light '>
                 <div className='flex flex-col'>
                     {
-                        languages1.map((language) => (
+                        data.languages1.map((language) => (
                             <div className={`${language.color} md:mt-4 mt-2'`}>{language.name}</div>
                         ))
                     }
@@ -48,12 +27,32 @@ function Languages() {
                 </div>
                 <div className='flex flex-col ml-16 md:ml-28'>
                     {
-                        languages2.map((language) => (
+                        data.languages2.map((language) => (
                             <div className={`${language.color} md:mt-4 mt-2'`}>{language.name}</div>
                         ))
                     }
                 </div>
             </div>
+            <div className='flex mt-12'> 
+    {
+        [...data.languages1, ...data.languages2].map((language) => (
+            language.src && (  //sadece srcyi render eder
+                <div 
+                    key={language.name} 
+                    className='relative w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] md:w-[60px] md:h-[60px] rounded-full overflow-hidden mr-4'
+                >
+                    <Image
+                        src={language.src}
+                        fill
+                        style={{ objectFit: 'cover', objectPosition: 'center' }}
+                        alt={`${language.name} logo`}
+                    />
+                </div>
+            )
+        ))
+    }
+</div>
+
         </div>
     )
 }

@@ -1,0 +1,47 @@
+{
+    "languages1": [
+      {
+        "name": "HTML",
+        "color": "text-html",
+        "src": "/images/html.png"
+      },
+      {
+        "name": "CSS",
+        "color": "text-css",
+        "src": "/images/css.png"
+      },
+      {
+        "name": "JAVASCRIPT",
+        "color": "text-js",
+        "src": "/images/js.png"
+      },
+      {
+        "name": "REACT",
+        "color": "text-react",
+        "src": "/images/react.png"
+      }
+    ],
+    "languages2": [
+      {
+        "name": "REDUX",
+        "color": "text-redux",
+          "src": "/images/redux.jpg"
+      },
+      {
+        "name": "TYPESCRIPT",
+        "color": "text-ts",
+          "src": "/images/ts.png"
+      },
+      {
+        "name": "NEXT JS",
+        "color": "text-nextjs",
+          "src": "/images/next.png"
+      },
+      {
+        "name": "SASS",
+        "color": "text-sass",
+          "src": "/images/sass.png"
+      }
+    ]
+  }
+  
