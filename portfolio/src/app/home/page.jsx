@@ -1,9 +1,10 @@
 import React from 'react'
+import Header from '../components/homeheader'
 
 function Home() {
   return (
-    <div className='text-white'>
-   Home   
+    <div >
+   <Header/> 
     </div>
   )
 }
