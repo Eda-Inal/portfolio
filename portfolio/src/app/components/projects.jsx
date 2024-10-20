@@ -34,8 +34,15 @@ function MyProject() {
                     </div>
     
                     <div className='flex mt-4 xl:w-4/5 w-5/5 justify-between'>
-                        <button className='bg-secondary lg:w-24 w-20  lg:h-10 h-8 rounded-md text-lg lg:text-xl text-gray-800'>Live</button>
-                        <button className='bg-secondary lg:w-24 w-20  lg:h-10 h-8 rounded-md text-lg  lg:text-xl text-gray-800'>Details</button>
+                    {proje.isLive && (
+                    <button
+                        className='bg-secondary lg:w-24 w-20 lg:h-10 h-8 rounded-md text-lg lg:text-xl text-gray-800 shadow-md shadow-gray-300'
+                        onClick={() => window.open(proje.live, '_blank')} 
+                    >
+                        Live
+                    </button>
+                )}
+                        <button className='bg-secondary lg:w-24 w-20  lg:h-10 h-8 rounded-md text-lg  lg:text-xl text-gray-800 shadow-md shadow-gray-300'>Details</button>
                     </div>
                 </div>
                 ))
