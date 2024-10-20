@@ -7,7 +7,7 @@ function Navbar() {
             <div className='flex flex-col ml-4 '>
                 <div className='mb-2 font-light'><Link href="./home">Home</Link></div>
                 <div className='mb-2 font-light'><Link href="./about">About</Link></div>
-                <div className='mb-2 font-light'>Projects</div>
+                <div className='mb-2 font-light'><Link href="./projects">Projects</Link></div>
                 <div className=' font-light'>Contact</div>
             </div>
 

@@ -3,8 +3,7 @@ import React from 'react'
 function AboutMe() {
     return (
         <div>
-            <div className='text-2xl md:text-2xl lg:text-3xl'>About Me</div>
-            <div className='w-full md:w-4/5 text-lg md:text-xl lg:text-2xl font-light'>
+            <div className='w-full md:w-4/5 text-lg md:text-xl lg:text-2xl font-light tracking-wide'>
                 <p className='mt-8'>
                     I am a passionate frontend developer with a strong foundation in modern web technologies, including <span className='text-secondary'>JavaScript, React, Typescript and Next.js.</span>  I specialize in creating responsive, user-friendly interfaces with a focus on both performance and aesthetics.
                 </p>
