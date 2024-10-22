@@ -1,45 +1,37 @@
 {
     "languages1": [
       {
-        "name": "HTML",
-        "color": "text-html",
+        "name": "html",
         "src": "/images/html.png"
       },
       {
-        "name": "CSS",
-        "color": "text-css",
+        "name": "css",
         "src": "/images/css.png"
       },
       {
-        "name": "JAVASCRIPT",
-        "color": "text-js",
+        "name": "javascript",
         "src": "/images/js.png"
       },
       {
-        "name": "REACT",
-        "color": "text-react",
+        "name": "react",
         "src": "/images/react.png"
       }
     ],
     "languages2": [
       {
-        "name": "REDUX",
-        "color": "text-redux",
+        "name": "redux",
           "src": "/images/redux.jpg"
       },
       {
-        "name": "TYPESCRIPT",
-        "color": "text-ts",
+        "name": "typescript",
           "src": "/images/ts.png"
       },
       {
-        "name": "NEXT JS",
-        "color": "text-nextjs",
+        "name": "nextjs",
           "src": "/images/next.png"
       },
       {
-        "name": "SASS",
-        "color": "text-sass",
+        "name": "sass",
           "src": "/images/sass.png"
       }
     ]

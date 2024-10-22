@@ -14,10 +14,10 @@ module.exports = {
         secondary:"#3EEDCF",
         html:"#FF3C3C",
         css:"#4B9EFF",
-        js:"#FFF857",
+        javascript:"#FFF857",
         react:"#43FBFB",
         redux:"#C377FF",
-        ts:"#3190FF",
+        typescript:"#3190FF",
         nextjs:"#FFFFFF",
         sass:"#FF2674"
       },
