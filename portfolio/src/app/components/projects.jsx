@@ -3,6 +3,12 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image'
 
 function MyProject() {
+    const classMap = {
+        react: 'text-react',
+        redux: 'text-redux',
+        typescript: 'text-typescript',
+        sass: 'text-sass',
+      };
     const [data, setData] = useState({ projects: [] });
     useEffect(() => {
         fetch('/p.json')
@@ -34,6 +40,17 @@ function MyProject() {
                     </div>
     
                     <div className='flex mt-4 xl:w-4/5 w-5/5 justify-between'>
+                    <div className="flex flex-wrap">
+      {proje.languages?.map((language) => (
+        <div 
+          key={language} 
+          className={`mr-2 ${classMap[language] || 'text-white'}`}
+        >
+          {language.toUpperCase()}
+        </div>
+      ))}
+    </div>
+                       
                     {proje.isLive && (
                     <button
                         className='bg-secondary lg:w-24 w-20 lg:h-10 h-8 rounded-md text-lg lg:text-xl text-gray-800 shadow-md shadow-gray-300'
@@ -42,7 +59,7 @@ function MyProject() {
                         Live
                     </button>
                 )}
-                        <button className='bg-secondary lg:w-24 w-20  lg:h-10 h-8 rounded-md text-lg  lg:text-xl text-gray-800 shadow-md shadow-gray-300'>Details</button>
+                       
                     </div>
                 </div>
                 ))

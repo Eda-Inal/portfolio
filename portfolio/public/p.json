@@ -4,55 +4,64 @@
             "title": "Movie",
             "src": "/images/movie.png",
             "live": "https://filmlab-website.vercel.app/",
-            "isLive": true
+            "isLive": true,
+            "languages" :["nextjs", "react","redux"]
         },
         { 
     "title" : "Cosmetic E-Commerce",
     "src" : "/images/commerce.png",
     "live": "https://bright-aura.vercel.app/",
-    "isLive" : true
+    "isLive" : true,
+    "languages" :["nextjs", "react","redux"]
 },
 { 
     "title" : "Note Me",
     "src" : "/images/note.png",
     "live": "https://noteme-app-xi.vercel.app/",
-    "isLive" : true
+    "isLive" : true,
+    "languages" :["react","redux"]
 },
 { 
     "title" : "Quiz",
     "src" : "/images/quiz.png",
     "live": "https://typescript-quizgame.vercel.app/",
-    "isLive" : true
+    "isLive" : true,
+    "languages" :["typescript", "context api","sass"]
 },
 { 
     "title" : "Weather",
     "src" : "/images/weather.png",
     "live": "https://redux-weather-app-9mwd.vercel.app/",
-    "isLive" : true
+    "isLive" : true,
+    "languages" :[ "react","redux"]
 },
 { 
     "title" : "Pizza Ordering",
     "src" : "/images/pizza.png",
     "live": "https://pizza-pizzo.vercel.app/",
-    "isLive" : true
+    "isLive" : true,
+    "languages" :["nextjs", "react","redux"]
 },
 { 
     "title" : "Text Generator",
     "src" : "/images/text.png",
     "live": "https://reduxtextgenerator.netlify.app/",
-    "isLive" : true
+    "isLive" : true,
+    "languages" :[ "react","redux"]
 },
 { 
     "title" : "Bmi Calculator",
     "src" : "/images/bmi.png",
     "live": "https://bmi-calculator-jxoz.vercel.app/",
-    "isLive" : true
+    "isLive" : true,
+    "languages" :["nextjs", "react","redux"]
 },
 { 
     "title" : "Typing Speed",
     "src" : "/images/typing.png",
     "live": "https://typingspeeddapp.netlify.app/",
-    "isLive" : true
+    "isLive" : true,
+    "languages" :[ "react","redux"]
 },
 { 
     "title" : "Markdown Previewer",
@@ -63,12 +72,14 @@
 { 
     "title" : "Calculator",
     "src" : "/images/calculator.png",
-    "isLive" : false
+    "isLive" : false,
+    "languages" :[ "react"]
 },
 { 
     "title" : "Find Book",
     "src" : "/images/findbook.png",
-    "isLive" : false
+    "isLive" : false,
+    "languages" :["react","redux"]
 }
 
     ]
