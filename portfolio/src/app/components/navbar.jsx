@@ -8,7 +8,7 @@ function Navbar() {
                 <div className='mb-2 font-light'><Link href="./home">Home</Link></div>
                 <div className='mb-2 font-light'><Link href="./about">About</Link></div>
                 <div className='mb-2 font-light'><Link href="./projects">Projects</Link></div>
-                <div className=' font-light'>Contact</div>
+                <div className=' font-light'><Link href="./contact">Contact</Link></div>
             </div>
 
         </div>
