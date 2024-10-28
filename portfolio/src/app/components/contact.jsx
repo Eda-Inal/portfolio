@@ -34,7 +34,7 @@ function ContactPage() {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="flex flex-col mt-8 space-y-6">
+        <form onSubmit={handleSubmit} className="flex flex-col mt-8 space-y-4 sm:space-y-3 lg:space-y-6">
             <InputField
                 label="Name"
                 name="name"
@@ -59,7 +59,7 @@ function ContactPage() {
             />
             <button
                 type="submit"
-                className="w-2/4 h-12 rounded-lg transition bg-secondary text-black hover:bg-[#77ffe8]"
+                className="lg:w-2/4 sm:w-3/4 h-12 rounded-lg transition bg-secondary text-black hover:bg-[#77ffe8]"
             >
                 Send Message
             </button>
@@ -70,14 +70,14 @@ function ContactPage() {
 
 function InputField({ label, name, value, onChange, error, isTextarea = false }) {
     return (
-        <div className="w-2/4 flex flex-col">
-            <label className="mb-2 font-medium">{label}</label>
+        <div className=" sm:w-3/4 lg:w-2/4 flex flex-col">
+            <label className="mb-2">{label}</label>
             {isTextarea ? (
                 <textarea
                     name={name}
                     value={value}
                     onChange={onChange}
-                    className="h-28 p-3 rounded-lg border border-gray-300 focus:outline-secondary text-black"
+                    className="md:h-28  p-3 rounded-lg border border-gray-300 focus:outline-secondary text-black"
                 />
             ) : (
                 <input
@@ -85,7 +85,7 @@ function InputField({ label, name, value, onChange, error, isTextarea = false })
                     name={name}
                     value={value}
                     onChange={onChange}
-                    className="h-12 p-3 rounded-lg border border-gray-300 focus:outline-secondary text-black"
+                    className="h-12  p-3 rounded-lg border border-gray-300 focus:outline-secondary text-black"
                 />
             )}
 
