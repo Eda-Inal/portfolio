@@ -19,7 +19,12 @@ module.exports = {
         redux:"#C377FF",
         typescript:"#3190FF",
         nextjs:"#FFFFFF",
-        sass:"#FF2674"
+        sass:"#FF2674",
+        figma:"#f24e1e",
+        postman:"#ff6c37",
+        netlify:"#3C3744",
+        vercel:"#fff",
+        vite:"#FFD800 "
       },
     },
   },
