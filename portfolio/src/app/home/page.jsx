@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../components/homeheader'
 import Languages from '../components/languages'
+import Tools from '../components/tools'
 
 function Home() {
     return (
@@ -8,8 +9,12 @@ function Home() {
             <div className='flex flex-col'>
                 <div><Header /> </div>
                 <div className='md:mt-10 lg:mt-16 mt-8'><Languages /> </div>
+                <Tools />
 
             </div>
+            <button className='mt-5 border border-secondary p-3 rounded-md hover:bg-secondary hover:text-black md:text-lg text-sm sm:text-base   '>
+                Tools and Libraries
+            </button>
 
         </div>
     )
