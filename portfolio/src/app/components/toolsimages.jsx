@@ -17,11 +17,12 @@ function ToolsImages() {
             .catch((error) => console.error('Error loading data:', error));
     }, []);
 
-    const renderImage = (item) => (
+    const renderImage = (item,index) => (
         <div
             key={item.name}
             className="relative w-[35px] h-[35px] sm:w-[50px] sm:h-[50px] lg:w-[60px] lg:h-[60px] 
-        rounded-full overflow-hidden border-2 mr-4 mt-4"
+        rounded-full overflow-hidden border-2 mr-4 mt-4 animate-wave"
+        style={{ animationDelay: `${index * 0.2}s` }}
         >
             <Image
                 src={item.src}

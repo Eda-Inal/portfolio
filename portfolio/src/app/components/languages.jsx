@@ -50,10 +50,11 @@ function Languages() {
       <div className="flex mt-12 flex-wrap">
         {[...data.languages1, ...data.languages2]
           .filter((language) => language.src) 
-          .map((language) => (
+          .map((language,index) => (
             <div
               key={language.name}
-              className="relative w-[35px] h-[35px] sm:w-[50px] sm:h-[50px] lg:w-[60px] lg:h-[60px] rounded-full overflow-hidden mr-4 mt-4"
+              className="relative w-[35px] h-[35px] sm:w-[50px] sm:h-[50px] lg:w-[60px] lg:h-[60px] rounded-full overflow-hidden mr-4 mt-4 animate-wave"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               <Image
                 src={language.src}
