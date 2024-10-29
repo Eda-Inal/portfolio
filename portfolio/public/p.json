@@ -2,82 +2,82 @@
     "projects": [
         {
             "title": "Movie",
-            "src": "/images/movie.png",
+            "src": "/images/projects/movie.png",
             "live": "https://filmlab-website.vercel.app/",
             "isLive": true,
             "languages" :["nextjs", "react","redux"]
         },
         { 
     "title" : "Cosmetic E-Commerce",
-    "src" : "/images/commerce.png",
+    "src" : "/images/projects/commerce.png",
     "live": "https://bright-aura.vercel.app/",
     "isLive" : true,
     "languages" :["nextjs", "react","redux"]
 },
 { 
     "title" : "Note Me",
-    "src" : "/images/note.png",
+    "src" : "/images/projects/note.png",
     "live": "https://noteme-app-xi.vercel.app/",
     "isLive" : true,
     "languages" :["react","redux"]
 },
 { 
     "title" : "Quiz",
-    "src" : "/images/quiz.png",
+    "src" : "/images/projects/quiz.png",
     "live": "https://typescript-quizgame.vercel.app/",
     "isLive" : true,
     "languages" :["typescript", "context api","sass"]
 },
 { 
     "title" : "Weather",
-    "src" : "/images/weather.png",
+    "src" : "/images/projects/weather.png",
     "live": "https://redux-weather-app-9mwd.vercel.app/",
     "isLive" : true,
     "languages" :[ "react","redux"]
 },
 { 
     "title" : "Pizza Ordering",
-    "src" : "/images/pizza.png",
+    "src" : "/images/projects/pizza.png",
     "live": "https://pizza-pizzo.vercel.app/",
     "isLive" : true,
     "languages" :["nextjs", "react","redux"]
 },
 { 
     "title" : "Text Generator",
-    "src" : "/images/text.png",
+    "src" : "/images/projects/text.png",
     "live": "https://reduxtextgenerator.netlify.app/",
     "isLive" : true,
     "languages" :[ "react","redux"]
 },
 { 
     "title" : "Bmi Calculator",
-    "src" : "/images/bmi.png",
+    "src" : "/images/projects/bmi.png",
     "live": "https://bmi-calculator-jxoz.vercel.app/",
     "isLive" : true,
     "languages" :["nextjs", "react","redux"]
 },
 { 
     "title" : "Typing Speed",
-    "src" : "/images/typing.png",
+    "src" : "/images/projects/typing.png",
     "live": "https://typingspeeddapp.netlify.app/",
     "isLive" : true,
     "languages" :[ "react","redux"]
 },
 { 
     "title" : "Markdown Previewer",
-    "src" : "/images/text.png",
+    "src" : "/images/projects/text.png",
     "live": "https://kaleidoscopic-mermaid-094ac1.netlify.app/",
     "isLive" : true
 },
 { 
     "title" : "Calculator",
-    "src" : "/images/calculator.png",
+    "src" : "/images/projects/calculator.png",
     "isLive" : false,
     "languages" :[ "react"]
 },
 { 
     "title" : "Find Book",
-    "src" : "/images/findbook.png",
+    "src" : "/images/projects/findbook.png",
     "isLive" : false,
     "languages" :["react","redux"]
 }

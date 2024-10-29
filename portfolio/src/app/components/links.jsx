@@ -1,6 +1,6 @@
 import React from 'react';
-import linkedin from "../../../public/images/in.png";
-import github from "../../../public/images/github.png";
+import linkedin from "../../../public/images/meinfo/in.png";
+import github from "../../../public/images/meinfo/github.png";
 import Image from 'next/image';
 
 function Links() {

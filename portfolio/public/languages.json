@@ -2,37 +2,37 @@
     "languages1": [
       {
         "name": "html",
-        "src": "/images/html.png"
+        "src": "/images/techs/html.png"
       },
       {
         "name": "css",
-        "src": "/images/css.png"
+        "src": "/images/techs/css.png"
       },
       {
         "name": "javascript",
-        "src": "/images/js.png"
+        "src": "/images/techs/js.png"
       },
       {
         "name": "react",
-        "src": "/images/react.png"
+        "src": "/images/techs/react.png"
       }
     ],
     "languages2": [
       {
         "name": "redux",
-          "src": "/images/redux.jpg"
+          "src": "/images/techs/redux.jpg"
       },
       {
         "name": "typescript",
-          "src": "/images/ts.png"
+          "src": "/images/techs/ts.png"
       },
       {
         "name": "nextjs",
-          "src": "/images/next.png"
+          "src": "/images/techs/next.png"
       },
       {
         "name": "sass",
-          "src": "/images/sass.png"
+          "src": "/images/techs/sass.png"
       }
     ]
   }

@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import me from "../../../public/images/me.jpeg"
+import me from "../../../public/images/meinfo/me.jpeg"
 
 function Photo() {
     return (
