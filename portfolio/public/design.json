@@ -2,19 +2,19 @@
     "design": [
         {
             "name": "tailwind",
-            "src": "/images/libraries/vite.png"
+            "src": "/images/libraries/tailwind.png"
         },
         {
             "name": "material",
-            "src": "/images/libraries/netlify.png"
+            "src": "/images/libraries/material.jpg"
         },
         {
             "name": "chakra",
-            "src": "/images/libraries/vercel.png"
+            "src": "/images/libraries/chakra.jpg"
         },
         {
             "name": "bootstrap",
-            "src": "/images/libraries/figma.png"
+            "src": "/images/libraries/bootstrap.png"
         }
     ]
 }
