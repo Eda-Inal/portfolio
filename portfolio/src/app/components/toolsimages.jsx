@@ -34,7 +34,7 @@ function ToolsImages() {
 
     return (
         <div>
-            <div className="flex mt-12 flex-wrap">
+            <div className="flex mt-4 sm:mt-6 lg:mt-12 flex-wrap">
                 {data.tools.map(renderImage)}
                 {data.design.map(renderImage)}
             </div>

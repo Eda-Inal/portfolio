@@ -22,7 +22,7 @@ function Tools() {
   const renderTools = (tool) => (
     <div
       key={tool.name}
-      className={`mt-2 md:mt-4 mr-5 p-2 border-2 rounded-md
+      className={`mt-2 md:mt-4 md:mr-5 mr-3 p-2 border-2 rounded-md
         ${toolsMap[tool.name] || ''}`}
     >
       {tool.name.toUpperCase()}
@@ -31,11 +31,11 @@ function Tools() {
 
   return (
     <div>
-      <div className="md:text-2xl text-md sm:text-xl font-light mb-2">
+      <div className="md:text-2xl text-xl sm:text-xl font-light mb-2">
         TOOLS
       </div>
 
-      <div className="flex flex-row md:text-2xl text-md sm:text-xl font-light">
+      <div className="flex flex-row md:text-2xl text-sm sm:text-base font-light">
         <div className="flex flex-wrap">
           {data.tools.map(renderTools)}
         </div>
