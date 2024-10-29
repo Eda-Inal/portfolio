@@ -26,7 +26,7 @@ module.exports = {
         vercel:"#fff",
         vite:"#9566ff",
         material:"#007fff",
-        bootstrap:"#563d7c",
+        bootstrap:"#7f18f9",
         tailwind:"#38b2ac",
         chakra:"#319795"
       },

@@ -1,0 +1,20 @@
+{
+    "design": [
+        {
+            "name": "tailwind",
+            "src": "/images/libraries/vite.png"
+        },
+        {
+            "name": "material",
+            "src": "/images/libraries/netlify.png"
+        },
+        {
+            "name": "chakra",
+            "src": "/images/libraries/vercel.png"
+        },
+        {
+            "name": "bootstrap",
+            "src": "/images/libraries/figma.png"
+        }
+    ]
+}
