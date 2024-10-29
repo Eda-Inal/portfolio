@@ -1,0 +1,24 @@
+{
+    "tools": [
+        {
+            "name": "vite",
+            "src": "/images/tools/vite.png"
+        },
+        {
+            "name": "netlify",
+            "src": "/images/tools/netlify.png"
+        },
+        {
+            "name": "vercel",
+            "src": "/images/tools/vercel.png"
+        },
+        {
+            "name": "figma",
+            "src": "/images/tools/figma.png"
+        },
+        {
+            "name": "postman",
+            "src": "/images/tools/postman.png"
+        }
+    ]
+}

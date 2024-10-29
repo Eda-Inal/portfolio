@@ -1,35 +1,65 @@
-import React from 'react';
+'use client';
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 
-const badgeUrls = {
-  postman: "https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white",
-  figma: "https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white",
-  netlify: "https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white",
-  vercel: "https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white",
-  vite: "https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white",
+const toolsMap = {
+  vite: 'text-vite',
+  vercel: 'text-vercel',
+  netlify: 'text-netlify',
+  postman: 'text-postman',
+  figma: 'text-figma',
 };
 
 function Tools() {
- 
-  const renderTool = (toolName, url) => (
-    <div key={toolName} className="mt-2 md:mt-4 mr-2">
-      <img src={url} alt={`${toolName} badge`} className="h-10" />
+  const [data, setData] = useState({ tools: []});
+
+  useEffect(() => {
+    fetch('/tools.json')
+      .then((response) => response.json())
+      .then((data) => setData(data))
+      .catch((error) => console.error('Error loading languages:', error));
+  }, []);
+
+  const renderTools = (tool) => (
+    <div
+      key={tool.name}
+      className={`mt-2 md:mt-4 mr-7 ${toolsMap[tool.name] || ''}`}
+    >
+      {tool.name.toUpperCase()}
     </div>
   );
 
   return (
     <div>
-      <div className="md:text-2xl text-md sm:text-xl font-light mb-2">
+      <div className="md:text-2xl text-md sm:text-xl font-light mb-4">
      TOOLS
       </div>
 
-      <div className="flex flex-row flex-wrap md:text-2xl text-md sm:text-xl font-light">
-      <div className="flex flex-wrap">
-        {Object.entries(badgeUrls).map(([name, url]) => renderTool(name, url))}
+      <div className="flex flex-row md:text-2xl text-md sm:text-xl font-light">
+        <div className="flex">
+          {data.tools.map(renderTools)}
+        </div>
       </div>
-  </div> 
+
+      {/* <div className="flex mt-12 flex-wrap">
+        {[...data.languages1, ...data.languages2]
+          .filter((language) => language.src) 
+          .map((language) => (
+            <div
+              key={language.name}
+              className="relative w-[35px] h-[35px] sm:w-[50px] sm:h-[50px] lg:w-[60px] lg:h-[60px] rounded-full overflow-hidden mr-4 mt-4"
+            >
+              <Image
+                src={language.src}
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                alt={`${language.name} logo`}
+              />
+            </div>
+          ))}
+      </div> */}
     </div>
   );
 }
 
 export default Tools;
-
