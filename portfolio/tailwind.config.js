@@ -22,9 +22,13 @@ module.exports = {
         sass:"#FF2674",
         figma:"#f24e1e",
         postman:"#ff6c37",
-        netlify:"#3C3744",
+        netlify:"#00c7b7",
         vercel:"#fff",
-        vite:"#FFD800 "
+        vite:"#8d6ffe",
+        material:"#007fff",
+        bootstrap:"#563d7c",
+        tailwind:"#38b2ac",
+        chakra:"#319795"
       },
     },
   },
