@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 function ContactPage() {
     const [formData, setFormData] = useState({
@@ -23,13 +24,25 @@ function ContactPage() {
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
+    console.log('User ID:', process.env.NEXT_PUBLIC_EMAILJS_USER_ID);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validate()) {
-            console.log('Form submitted:', formData);
-            setFormData({ name: '', email: '', message: '' });
-            alert('Message sent successfully!');
+            emailjs.send(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, {
+                name: formData.name,
+                email: formData.email,
+                message: formData.message,
+            }, process.env.NEXT_PUBLIC_EMAILJS_USER_ID)
+            .then((response) => {
+                console.log('Email sent successfully:', response.status, response.text);
+                alert('Message sent successfully!');
+                setFormData({ name: '', email: '', message: '' });
+            })
+            .catch((err) => {
+                console.error('Failed to send email:', err);
+                alert('Failed to send message, please try again.');
+            });
         }
     };
 
@@ -67,17 +80,16 @@ function ContactPage() {
     );
 }
 
-
 function InputField({ label, name, value, onChange, error, isTextarea = false }) {
     return (
-        <div className=" sm:w-3/4 lg:w-2/4 flex flex-col">
+        <div className="sm:w-3/4 lg:w-2/4 flex flex-col">
             <label className="mb-2">{label}</label>
             {isTextarea ? (
                 <textarea
                     name={name}
                     value={value}
                     onChange={onChange}
-                    className="md:h-28  p-3 rounded-lg border border-gray-300 focus:outline-secondary text-black"
+                    className="md:h-28 p-3 rounded-lg border border-gray-300 focus:outline-secondary text-black"
                 />
             ) : (
                 <input
@@ -85,7 +97,7 @@ function InputField({ label, name, value, onChange, error, isTextarea = false })
                     name={name}
                     value={value}
                     onChange={onChange}
-                    className="h-12  p-3 rounded-lg border border-gray-300 focus:outline-secondary text-black"
+                    className="h-12 p-3 rounded-lg border border-gray-300 focus:outline-secondary text-black"
                 />
             )}
 
