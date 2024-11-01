@@ -1,6 +1,9 @@
 'use client'
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
+import Image from 'next/image';
+import accept from '../../../public/images/notifications/accept.png';
+import cancel from '../../../public/images/notifications/cancel.png';
 
 function Notification({ message, type, onClose }) {
     useEffect(() => {
@@ -10,14 +13,17 @@ function Notification({ message, type, onClose }) {
 
     return ReactDOM.createPortal(
         <div
-            className={`fixed top-4 right-4 p-4 rounded-md text-white shadow-md ${
-                type === 'success' ? 'bg-green-500' : 'bg-red-500'
+            className={`fixed top-4 right-1 p-3 rounded-md text-black shadow-md flex items-center space-x-3 ${
+                type === 'success' ? 'bg-secondary' : 'bg-red-500'
             }`}
         >
+            <Image
+                src={type === 'success' ? accept : cancel}
+                alt={type === 'success' ? 'Success icon' : 'Error icon'}
+                width={20}
+                height={20}
+            />
             <span>{message}</span>
-            <button onClick={onClose} className="ml-4 text-lg font-bold">
-                x
-            </button>
         </div>,
         document.getElementById('notification-root')
     );
