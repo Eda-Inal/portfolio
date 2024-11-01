@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import Notification from './notifications';
 
 function ContactPage() {
     const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ function ContactPage() {
     });
 
     const [errors, setErrors] = useState({});
+    const [notification, setNotification] = useState(null);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -24,7 +26,6 @@ function ContactPage() {
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
-    console.log('User ID:', process.env.NEXT_PUBLIC_EMAILJS_USER_ID);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -34,49 +35,58 @@ function ContactPage() {
                 email: formData.email,
                 message: formData.message,
             }, process.env.NEXT_PUBLIC_EMAILJS_USER_ID)
-            .then((response) => {
-                console.log('Email sent successfully:', response.status, response.text);
-                alert('Message sent successfully!');
-                setFormData({ name: '', email: '', message: '' });
-            })
-            .catch((err) => {
-                console.error('Failed to send email:', err);
-                alert('Failed to send message, please try again.');
-            });
+                .then((response) => {
+                    setNotification({ message: 'Message sent successfully!', type: 'success' });
+                    setFormData({ name: '', email: '', message: '' });
+                })
+                .catch((err) => {
+                    setNotification({ message: 'Failed to send message, please try again.', type: 'error' });
+                });
         }
     };
 
     return (
-        <form onSubmit={handleSubmit} className="flex flex-col mt-8 space-y-4 sm:space-y-3 lg:space-y-6">
-            <InputField
-                label="Name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                error={errors.name}
-            />
-            <InputField
-                label="Email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                error={errors.email}
-            />
-            <InputField
-                label="Message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                error={errors.message}
-                isTextarea
-            />
-            <button
-                type="submit"
-                className="lg:w-2/4 sm:w-3/4 h-12 rounded-lg transition bg-secondary text-black hover:bg-[#77ffe8]"
-            >
-                Send Message
-            </button>
-        </form>
+        <>
+            <form onSubmit={handleSubmit} className="flex flex-col mt-8 space-y-4 sm:space-y-3 lg:space-y-6">
+                <InputField
+                    label="Name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    error={errors.name}
+                />
+                <InputField
+                    label="Email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    error={errors.email}
+                />
+                <InputField
+                    label="Message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    error={errors.message}
+                    isTextarea
+                />
+                <button
+                    type="submit"
+                    className="lg:w-2/4 sm:w-3/4 h-12 rounded-lg transition bg-secondary text-black hover:bg-[#77ffe8]"
+                >
+                    Send Message
+                </button>
+            </form>
+            {notification && (
+                <Notification
+                    message={notification.message}
+                    type={notification.type}
+                    onClose={() => setNotification(null)}
+                />
+            )}
+        </>
+
+
     );
 }
 

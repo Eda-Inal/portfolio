@@ -1,6 +1,5 @@
 import "./globals.css";
 import SideBar from "./sidebar/page";
-import Footer from "./components/footer";
 
 
 export default function RootLayout({ children }) {
@@ -11,6 +10,7 @@ export default function RootLayout({ children }) {
         <div className="flex-grow w-full p-4 overflow-y-auto">
           {children}
         </div>
+        <div id="notification-root"></div>
       </body>
     </html>
   )}
