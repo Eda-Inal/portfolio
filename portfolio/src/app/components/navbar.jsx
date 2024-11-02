@@ -8,7 +8,7 @@ function Navbar() {
     const isActive = (path) =>
         pathname === path
           ? 'text-secondary border-b-2 border-secondary'
-          : 'border-b-2 border-transparent'; 
+          : 'border-b-2 border-transparent  transition-transform duration-300 ease-in-out transform hover:scale-105'; 
     return (
         <div className='border-l text-sm sm:text-lg md:text-2xl md:mt-8 flex  md:ml-0' >
             <div className='flex flex-col ml-4 '>
