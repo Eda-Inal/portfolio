@@ -8,7 +8,7 @@ function MyProject() {
         redux: 'text-redux',
         typescript: 'text-typescript',
         sass: 'text-sass',
-      };
+    };
     const [data, setData] = useState({ projects: [] });
     useEffect(() => {
         fetch('/p.json')
@@ -20,51 +20,54 @@ function MyProject() {
         <div>
             {
                 data.projects.map((proje) => (
-                    <div className='flex flex-col sm:mt-8 mt-4'>
-                    <div className='text-xl lg:text-2xl mb-3'>{proje.title}</div>
-    
-                    <div
-                        className="relative xl:w-4/5 w-5/5"
-                        style={{
-                            aspectRatio: '2 / 1',  // 2:1 ratio
-                            overflow: 'hidden',
-                        }}
-                    >
-                        <Image
-                            src={proje.src}
-                            alt={proje.title}
-                            layout="fill"
-                            objectFit="contain"    // görseli kırpmadan gösteriyor. 
-                            quality={100}
-                        />
+                    <div key={proje.title} className='flex flex-col sm:mt-8 mt-4'>
+                        <div className='text-xl lg:text-2xl mb-3'>{proje.title}</div>
+
+                        <div
+                            className="relative xl:w-4/5 w-5/5"
+                            style={{
+                                aspectRatio: '2 / 1',  // 2:1 ratio
+                                overflow: 'hidden',
+                            }}
+                        >
+                            <Image
+                                src={proje.src}
+                                alt={proje.title}
+                                fill
+                                style={{ objectFit: 'cover' }}
+                                quality={100}
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                priority
+
+                            />
+                        </div>
+
+                        <div className='flex mt-4 xl:w-4/5 w-5/5 justify-between'>
+                            <div className="flex flex-wrap">
+                                {proje.languages?.map((language) => (
+                                    <div
+                                        key={language}
+                                        className={`mr-2 ${classMap[language] || 'text-white'}`}
+                                    >
+                                        {language.toUpperCase()}
+                                    </div>
+                                ))}
+                            </div>
+
+                            {proje.isLive && (
+                                <button
+                                    className='bg-secondary lg:w-24 w-20 lg:h-10 h-8 rounded-md text-lg lg:text-xl text-gray-800 shadow-md shadow-gray-300'
+                                    onClick={() => window.open(proje.live, '_blank')}
+                                >
+                                    Live
+                                </button>
+                            )}
+
+                        </div>
                     </div>
-    
-                    <div className='flex mt-4 xl:w-4/5 w-5/5 justify-between'>
-                    <div className="flex flex-wrap">
-      {proje.languages?.map((language) => (
-        <div 
-          key={language} 
-          className={`mr-2 ${classMap[language] || 'text-white'}`}
-        >
-          {language.toUpperCase()}
-        </div>
-      ))}
-    </div>
-                       
-                    {proje.isLive && (
-                    <button
-                        className='bg-secondary lg:w-24 w-20 lg:h-10 h-8 rounded-md text-lg lg:text-xl text-gray-800 shadow-md shadow-gray-300'
-                        onClick={() => window.open(proje.live, '_blank')} 
-                    >
-                        Live
-                    </button>
-                )}
-                       
-                    </div>
-                </div>
                 ))
             }
-           
+
 
         </div>
     )

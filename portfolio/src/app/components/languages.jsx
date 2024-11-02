@@ -49,8 +49,8 @@ function Languages() {
 
       <div className="flex mt-12 flex-wrap">
         {[...data.languages1, ...data.languages2]
-          .filter((language) => language.src) 
-          .map((language,index) => (
+          .filter((language) => language.src)
+          .map((language, index) => (
             <div
               key={language.name}
               className="relative w-[35px] h-[35px] sm:w-[50px] sm:h-[50px] lg:w-[60px] lg:h-[60px] rounded-full overflow-hidden mr-4 mt-4 animate-wave"
@@ -59,6 +59,7 @@ function Languages() {
               <Image
                 src={language.src}
                 fill
+                sizes="(max-width: 600px) 50px, (max-width: 900px) 60px, 70px"
                 style={{ objectFit: 'cover', objectPosition: 'center' }}
                 alt={`${language.name} logo`}
               />

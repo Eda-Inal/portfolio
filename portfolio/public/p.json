@@ -31,7 +31,7 @@
 { 
     "title" : "Weather",
     "src" : "/images/projects/weather.png",
-    "live": "https://redux-weather-app-9mwd.vercel.app/",
+    "live": "https://redux-weather-app-five.vercel.app/",
     "isLive" : true,
     "languages" :[ "react","redux"]
 },

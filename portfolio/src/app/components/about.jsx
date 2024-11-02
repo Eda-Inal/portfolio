@@ -11,7 +11,7 @@ function AboutMe() {
                     For state management, I am proficient with <span className='text-secondary'>Redux</span> and the <span className='text-secondary'>Context API.</span>  In terms of design and styling, I have experience with popular libraries like <span className='underline'>Chakra UI, Material UI, Tailwind CSS,and Bootstrap</span>, as well as CSS preprocessors such as Sass to streamline and enhance my workflow.
                 </p>
                 <p className='mt-6'>
-                    For almost two years, I’ve been continuously honing my skills and expanding my expertise in frontend development. Currently, I am in my final year as a <span className='text-secondary'>Computer Science student, focusing on mathematics. </span> At 22 years old, I am eager to apply my knowledge to real-world projects and collaborate on innovative solutions.
+                    For almost one year, I’ve been continuously honing my skills and expanding my expertise in frontend development. Currently, I am in my final year as a <span className='text-secondary'>Computer Science student, focusing on mathematics. </span> At 22 years old, I am eager to apply my knowledge to real-world projects and collaborate on innovative solutions.
                 </p>
             </div>
 
