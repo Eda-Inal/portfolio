@@ -7,6 +7,12 @@ const designMap = {
   material: 'border-material',
   tailwind: 'border-tailwind',
 };
+const urlMap = {
+  chakra: 'https://chakra-ui.com/',
+  bootstrap: 'https://getbootstrap.com/',
+  material: 'https://mui.com/',
+  tailwind: 'https://tailwindcss.com/',
+};
 
 function Design() {
   const [data, setData] = useState({ design: [] });
@@ -19,13 +25,16 @@ function Design() {
   }, []);
 
   const renderDesign = (design) => (
-    <div
-      key={design.name}
-      className={`mt-2 md:mt-4 md:mr-5 mr-3 p-2 border-2 rounded-md
-        ${designMap[design.name] || ''}`}
-    >
-      {design.name.toUpperCase()}
-    </div>
+    <a
+    key={design.name}
+    href={urlMap[design.name]}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`mt-2 md:mt-4 md:mr-5 mr-3 p-2 border-2 rounded-md
+      ${designMap[design.name] || ''}`}
+  >
+    {design.name.toUpperCase()}
+  </a>
   );
 
   return (

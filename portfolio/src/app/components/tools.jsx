@@ -8,6 +8,13 @@ const toolsMap = {
   postman: 'border-postman',
   figma: 'border-figma',
 };
+const urlMap = {
+  vite: 'https://vitejs.dev/',
+  vercel: 'https://vercel.com/',
+  netlify: 'https://www.netlify.com/',
+  postman: 'https://www.postman.com/',
+  figma: 'https://www.figma.com/',
+};
 
 function Tools() {
   const [data, setData] = useState({ tools: [] });
@@ -20,13 +27,16 @@ function Tools() {
   }, []);
 
   const renderTools = (tool) => (
-    <div
-      key={tool.name}
-      className={`mt-2 md:mt-4 md:mr-5 mr-3 p-2 border-2 rounded-md
-        ${toolsMap[tool.name] || ''}`}
-    >
-      {tool.name.toUpperCase()}
-    </div>
+    <a
+    key={tool.name}
+    href={urlMap[tool.name]}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`mt-2 md:mt-4 md:mr-5 mr-3 p-2 border-2 rounded-md
+      ${toolsMap[tool.name] || ''}`}
+  >
+    {tool.name.toUpperCase()}
+  </a>
   );
 
   return (

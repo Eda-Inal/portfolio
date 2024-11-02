@@ -12,6 +12,16 @@ const classMap = {
   nextjs: 'text-nextjs',
   sass: 'text-sass',
 };
+const urlMap = {
+  html: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+  css: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+  javascript: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+  react: 'https://react.dev/',
+  redux: 'https://redux.js.org/',
+  typescript: 'https://www.typescriptlang.org/',
+  nextjs: 'https://nextjs.org/',
+  sass: 'https://sass-lang.com/',
+};
 
 function Languages() {
   const [data, setData] = useState({ languages1: [], languages2: [] });
@@ -24,12 +34,15 @@ function Languages() {
   }, []);
 
   const renderLanguage = (language) => (
-    <div
-      key={language.name}
-      className={`mt-2 md:mt-4 ${classMap[language.name] || ''}`}
-    >
-      {language.name.toUpperCase()}
-    </div>
+    <a
+    key={language.name}
+    href={urlMap[language.name]}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`mt-2 md:mt-4 ${classMap[language.name] || ''}`}
+  >
+    {language.name.toUpperCase()}
+  </a>
   );
 
   return (
