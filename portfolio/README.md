@@ -6,6 +6,8 @@
 - ⚛️ **Next.js**: Built with Next.js for a seamless and efficient user experience.
 
 - 🎨 **Tailwind CSS**: Styled using Tailwind CSS for rapid, utility-first styling with a responsive and modern design.
+  
+- 📱 Responsive Design: The website is designed to adapt seamlessly to various screen sizes, ensuring an optimal user experience on both desktop and mobile devices.
 
 - 🌐 **Client-Side Rendering**: Implemented using client-side rendering to load pages on the client for faster interaction.
 
