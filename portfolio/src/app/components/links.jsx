@@ -6,22 +6,23 @@ import Image from 'next/image';
 function Links() {
     return (
         <div className='md:w-36 md:mt-4 flex-col  flex md:flex-row md:justify-between justify-around h-28 sm:h-40 ml-2 sm:ml-8 md:ml-0  md:h-20  '>
-            <div className='relative w-[30px] h-[30px]  sm:w-[40px] sm:h-[40px] md:w-[60px] md:h-[60px] rounded-full overflow-hidden'>
+                     <a href="https://github.com/Eda-Inal" target="_blank" rel="noopener noreferrer" className='relative w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] md:w-[60px] md:h-[60px] rounded-full overflow-hidden'>
                 <Image
                     src={github}
                     fill
                     style={{ objectFit: 'cover', objectPosition: 'center' }}
-                    alt="LinkedIn Logo"
+                    alt="GitHub Logo"
                 />
-            </div>
-            <div className='relative w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] md:w-[60px] md:h-[60px] rounded-full overflow-hidden'>
+            </a>
+            <a href="https://www.linkedin.com/in/edainal" target="_blank" rel="noopener noreferrer" className='relative w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] md:w-[60px] md:h-[60px] rounded-full overflow-hidden'>
                 <Image
                     src={linkedin}
                     fill
                     style={{ objectFit: 'cover', objectPosition: 'center' }}
                     alt="LinkedIn Logo"
                 />
-            </div>
+            </a>
+
         </div>
     )
 }
