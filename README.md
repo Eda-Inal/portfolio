@@ -1,4 +1,5 @@
 ## Portfolio Project 
+[Visit My Portfolio Website](https://edainal.vercel.app/)
 
 ### This project is a **portfolio website** created with the following tools and technologies:
 
@@ -14,4 +15,8 @@
 
 - 🔔 **React Portal**: Notifications and alerts are managed using React Portal, ensuring they display efficiently in the application.
 
-- 🎛️ **useState & useEffect Hooks**: Utilizes React's `useState` and `useEffect` hooks for managing component state and side effects.
+- 🎛️ **useState & useEffect Hooks**: Utilizes React's useState and useEffect hooks for managing component state and side effects.
+
+### Project Overview
+  
+![Ekran görüntüsü 2024-11-02 190306](https://github.com/user-attachments/assets/f604dd63-37e5-428b-bed6-f358187a7a6f)
