@@ -26,18 +26,18 @@ function MyProject() {
                         <div
                             className="relative xl:w-4/5 w-5/5"
                             style={{
-                                aspectRatio: '2 / 1',  // 2:1 ratio
+                                aspectRatio: '2.2 / 1',  // 2:1 ratio
                                 overflow: 'hidden',
                             }}
                         >
                             <Image
                                 src={proje.src}
                                 alt={proje.title}
-                                fill
-                                style={{ objectFit: 'cover' }}
-                                quality={100}
+                                style={{ objectFit: 'cover' }} 
+                                quality={80}
+                                layout='fill'
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                priority
+                               
 
                             />
                         </div>

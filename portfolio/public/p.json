@@ -1,6 +1,13 @@
 {
     "projects": [
         {
+            "title": "Crypto Tracker",
+             "src": "/images/projects/crypto.png",
+            "live": "https://coin-scope-sandy.vercel.app/",
+            "isLive": true,
+            "languages" :["nextjs","typescript","redux"]
+        },
+        {
             "title": "Movie",
             "src": "/images/projects/movie.png",
             "live": "https://filmlab-website.vercel.app/",
